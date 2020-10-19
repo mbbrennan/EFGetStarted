@@ -26,22 +26,12 @@ namespace EFGetStarted
                 new Blog { BlogId = 5, Url = "http://www.quora.com" },
                 new Blog { BlogId = 6, Url = "http://www.twitter.com" });
 
-
-           //odelBuilder.Entity<Post>().HasData(
-      /*new Post { PostId = 1, BlogId = 1, Title = "Sample post-test", Content = "test test test" },
-      new Post { PostId = 1, BlogId = 2, Title = "Sports Headlines", Content = "Where's Travis Hamonic going to sign?" },
-      new Post { PostId = 1, BlogId = 4, Title = "Canadian News", Content = "Justin Trudeau spends $100 more tax dollars!" },
-      new Post { PostId = 1, BlogId = 6, Title = "Some Tweet", Content = "Th    is is my favorite dog, Hank!" },
-      new Post { PostId = 2, BlogId = 6, Title = "Second Tweet", Content = "Beautiful day here in Calgary!!!" });
-      */
-        
             modelBuilder.Entity<Post>().HasData(
                 new Post { BlogId = 1, PostId = 1, Title = "Sample post-test", Content = "test test test" },
                 new Post { BlogId = 2, PostId = 2, Title = "Sports Headlines", Content = "Where's Travis Hamonic going to sign?" },
                 new Post { BlogId = 4, PostId = 3, Title = "Canadian News", Content = "Justin Trudeau spends $100 more tax dollars!" },
                 new Post { BlogId = 6, PostId = 4, Title = "Some Tweet", Content = "This is my favorite dog, Hank!" },
                 new Post { BlogId = 6, PostId = 5, Title = "Second Tweet", Content = "Beautiful day here in Calgary!!!" });
-        
         }
     }
 
@@ -50,7 +40,6 @@ namespace EFGetStarted
        [Key]
         public int BlogId { get; set; }
         public string Url { get; set; }
-
         public List<Post> Posts { get; } = new List<Post>();
     }
 
