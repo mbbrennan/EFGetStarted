@@ -12,7 +12,7 @@ namespace EFGetStarted
                 // Create
 
                 Console.WriteLine("Inserting a new blog");
-                db.Add(new Blog { Url = "https://www.flixtor.to/" });
+                db.Add(new Blog { Url = "https://www.zenhabits.net/" });
                 db.SaveChanges();
 
                 // Read
@@ -29,8 +29,8 @@ namespace EFGetStarted
                 blog.Posts.Add(
                     new Post
                     {
-                        Title = "Marriage Story",
-                        Content = "Good movie if not a bit sad.",
+                        Title = "On being focused",
+                        Content = "These are Leo's words.",
                         Postdate = DateTime.Now
                     }); ; ;
                 db.SaveChanges();
